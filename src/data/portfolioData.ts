@@ -109,7 +109,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     role: "Junior MERN Stack Developer",
     company: "Crescent Webs",
     location: "Gulshan-e-Ravi, Lahore, Pakistan",
-    period: "Oct 2025 – Present",
+    period: "Oct 2025 - Present",
     isCurrent: true,
     type: "Full-Time",
     achievements: [
@@ -125,7 +125,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     role: "React Developer",
     company: "Keydevs Technologies Pvt. Ltd",
     location: "B Block Johar Town, Lahore, Pakistan",
-    period: "Aug 2024 – Aug 2025",
+    period: "Aug 2024 - Aug 2025",
     isCurrent: false,
     type: "Full-Time",
     achievements: [

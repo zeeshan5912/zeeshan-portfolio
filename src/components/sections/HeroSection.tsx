@@ -77,7 +77,7 @@ export function HeroSection() {
             transition={{ duration: 0.65, ease: "easeOut" }}
             className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#13382f] leading-[1.12] mb-5 sm:mb-6 font-sans"
           >
-            {PERSONAL_INFO.name} — Frontend &amp; MERN Stack Developer
+            {PERSONAL_INFO.name} | Frontend &amp; MERN Stack Developer
           </motion.h1>
 
           {/* Subtitle */}
