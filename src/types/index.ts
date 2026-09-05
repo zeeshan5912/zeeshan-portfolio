@@ -62,6 +62,8 @@ export interface CertificationItem {
   skills: string[];
   link?: string;
   badgeColor: string;
+  image?: string;
+  credentialId?: string;
 }
 
 export interface ContactInfo {
