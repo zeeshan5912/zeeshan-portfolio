@@ -18,7 +18,7 @@ export const PERSONAL_INFO: ContactInfo = {
   location: "Lahore, Pakistan",
   availableForHire: true,
   linkedin: "https://www.linkedin.com/in/ch-zeeshan-akram",
-  github: "https://github.com",
+  github: "https://github.com/zeeshan5912",
   summary:
     "Frontend-focused MERN Stack Developer with 1+ year of professional experience building responsive, high-performance web applications using React.js and Next.js. Skilled in Redux state management, RESTful API integration, and Server-Side Rendering (SSR). Passionate about clean UI, reusable component architectures, and silky smooth micro-interactions.",
 };
