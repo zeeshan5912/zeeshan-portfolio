@@ -22,27 +22,27 @@ export function ExperienceSection() {
         <Container size="default">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-8">
-              Engineered with Modern <span className="text-[#d4f938]">SSR &amp; MERN</span>
+              Engineered with Modern <span className="text-[#DFFF5E]">SSR &amp; MERN</span>
             </h2>
 
             {/* Overlapping Mockup Cards in Forest Green */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full mb-10 opacity-90">
               <div className="p-4 rounded-2xl bg-[#184439] border border-emerald-700/50 text-left">
-                <span className="text-[#d4f938] font-bold text-sm block mb-1">Clean State</span>
+                <span className="text-[#DFFF5E] font-bold text-sm block mb-1">Clean State</span>
                 <p className="text-xs text-slate-300">Redux Toolkit with persistent hydration and actions.</p>
               </div>
               <div className="p-4 rounded-2xl bg-[#184439] border border-emerald-700/50 text-left">
-                <span className="text-[#d4f938] font-bold text-sm block mb-1">SSR Performance</span>
+                <span className="text-[#DFFF5E] font-bold text-sm block mb-1">SSR Performance</span>
                 <p className="text-xs text-slate-300">Next.js App Router for instant load times and SEO.</p>
               </div>
               <div className="p-4 rounded-2xl bg-[#184439] border border-emerald-700/50 text-left">
-                <span className="text-[#d4f938] font-bold text-sm block mb-1">MERN APIs</span>
+                <span className="text-[#DFFF5E] font-bold text-sm block mb-1">MERN APIs</span>
                 <p className="text-xs text-slate-300">Robust Node.js &amp; Express endpoints with MongoDB.</p>
               </div>
             </div>
 
             {/* Circular Neon Lime Accent Badge (Babun Center Badge) */}
-            <div className="w-24 h-24 rounded-full bg-[#d4f938] text-[#13382f] flex flex-col items-center justify-center font-black shadow-2xl border-4 border-[#13382f] transform hover:scale-110 transition-transform cursor-default">
+            <div className="w-24 h-24 rounded-full bg-[#DFFF5E] text-[#13382f] flex flex-col items-center justify-center font-black shadow-2xl border-4 border-[#13382f] transform hover:scale-110 transition-transform cursor-default">
               <span className="text-sm font-extrabold tracking-widest uppercase">MERN</span>
               <span className="text-[10px] font-bold tracking-tighter">Stack</span>
             </div>
@@ -131,7 +131,7 @@ export function ExperienceSection() {
                 className="rounded-3xl bg-slate-50 border-2 border-slate-200/80 p-6 sm:p-8 hover:border-[#13382f] transition-all duration-300"
               >
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-                  <span className="px-3 py-1 rounded-full bg-[#13382f] text-[#d4f938] text-xs font-bold uppercase tracking-wider">
+                  <span className="px-3 py-1 rounded-full bg-[#13382f] text-[#DFFF5E] text-xs font-bold uppercase tracking-wider">
                     {exp.period}
                   </span>
                   <span className="text-xs font-semibold text-slate-500 flex items-center gap-1">

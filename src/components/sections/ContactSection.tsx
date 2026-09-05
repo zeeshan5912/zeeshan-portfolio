@@ -65,7 +65,7 @@ export function ContactSection() {
           {/* Logo with Green Dot (Babun Bottom Brand) */}
           <div className="flex items-center gap-2 mb-3">
             <div className="w-3.5 h-3.5 rounded-full bg-[#13382f] flex items-center justify-center">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#d4f938]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#DFFF5E]" />
             </div>
             <span className="font-extrabold text-base sm:text-lg text-[#13382f] tracking-tight">
               {PERSONAL_INFO.name}
@@ -83,7 +83,7 @@ export function ContactSection() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={triggerConfetti}
-            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#13382f] text-[#d4f938] font-bold text-sm uppercase tracking-wider hover:bg-black transition-all shadow-xl hover:shadow-2xl cursor-pointer flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#13382f] text-[#DFFF5E] font-bold text-sm uppercase tracking-wider hover:bg-black transition-all shadow-xl hover:shadow-2xl cursor-pointer flex items-center justify-center gap-2"
           >
             <span>Start WhatsApp Chat</span>
             <ArrowRight className="w-4 h-4" />
@@ -249,7 +249,7 @@ export function ContactSection() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="w-full py-3.5 rounded-full bg-[#13382f] text-[#d4f938] font-bold text-sm uppercase tracking-wider hover:bg-black transition-all cursor-pointer flex items-center justify-center gap-2 shadow-lg"
+                  className="w-full py-3.5 rounded-full bg-[#13382f] text-[#DFFF5E] font-bold text-sm uppercase tracking-wider hover:bg-black transition-all cursor-pointer flex items-center justify-center gap-2 shadow-lg"
                 >
                   <span>Submit Message</span>
                   <Send className="w-4 h-4" />

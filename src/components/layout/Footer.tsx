@@ -36,7 +36,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-emerald-800/60 text-center md:text-left">
           {/* Logo with Green Dot */}
           <div className="flex items-center gap-2">
-            <div className="w-3.5 h-3.5 rounded-full bg-[#d4f938] flex items-center justify-center">
+            <div className="w-3.5 h-3.5 rounded-full bg-[#DFFF5E] flex items-center justify-center">
               <span className="w-1.5 h-1.5 rounded-full bg-[#13382f]" />
             </div>
             <span className="font-extrabold text-xl text-white tracking-tight">
@@ -50,7 +50,7 @@ export function Footer() {
               <a
                 key={item.label}
                 href={item.href}
-                className="hover:text-[#d4f938] transition-colors py-1"
+                className="hover:text-[#DFFF5E] transition-colors py-1"
               >
                 {item.label}
               </a>
@@ -58,7 +58,7 @@ export function Footer() {
           </div>
 
           {/* Live Lahore Time Badge */}
-          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#184439] border border-emerald-700/60 text-xs font-mono text-[#d4f938]">
+          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#184439] border border-emerald-700/60 text-xs font-mono text-[#DFFF5E]">
             <MapPin className="w-3.5 h-3.5" />
             <span>Lahore, PK: {lahoreTime || "PKT"}</span>
           </div>
@@ -70,7 +70,7 @@ export function Footer() {
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 text-slate-300 hover:text-[#d4f938] transition-colors font-bold uppercase tracking-wider cursor-pointer py-1"
+            className="flex items-center gap-1.5 text-slate-300 hover:text-[#DFFF5E] transition-colors font-bold uppercase tracking-wider cursor-pointer py-1"
           >
             <span>Back to top</span>
             <ArrowUp className="w-3.5 h-3.5" />

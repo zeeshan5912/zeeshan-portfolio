@@ -41,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} scroll-smooth`}>
-      <body className="min-h-screen bg-white text-[#13382f] antialiased font-sans flex flex-col selection:bg-[#d4f938] selection:text-[#13382f]">
+      <body className="min-h-screen bg-white text-[#13382f] antialiased font-sans flex flex-col selection:bg-[#DFFF5E] selection:text-[#13382f]">
         {children}
       </body>
     </html>

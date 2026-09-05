@@ -10,7 +10,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-white text-[#13382f] overflow-x-hidden selection:bg-[#d4f938] selection:text-[#13382f]">
+    <main className="relative min-h-screen bg-white text-[#13382f] overflow-x-hidden selection:bg-[#DFFF5E] selection:text-[#13382f]">
       {/* Navigation Header */}
       <Navbar />
 

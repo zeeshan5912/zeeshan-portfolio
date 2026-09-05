@@ -66,7 +66,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               </button>
 
               <div className="relative z-10">
-                <span className="px-3 py-1 rounded-full bg-[#13382f] text-[#d4f938] text-[10px] font-extrabold uppercase tracking-wider mb-2 inline-block">
+                <span className="px-3 py-1 rounded-full bg-[#13382f] text-[#DFFF5E] text-[10px] font-extrabold uppercase tracking-wider mb-2 inline-block">
                   {project.category}
                 </span>
                 <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -141,7 +141,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto"
                   >
-                    <button className="w-full sm:w-auto px-5 py-2.5 rounded-full border-2 border-[#13382f] text-[#13382f] hover:bg-[#13382f] hover:text-[#d4f938] transition-all font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer">
+                    <button className="w-full sm:w-auto px-5 py-2.5 rounded-full border-2 border-[#13382f] text-[#13382f] hover:bg-[#13382f] hover:text-[#DFFF5E] transition-all font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer">
                       <GitHubIcon className="w-4 h-4" />
                       <span>View Code</span>
                     </button>
@@ -154,7 +154,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto"
                   >
-                    <button className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-[#13382f] text-[#d4f938] hover:bg-black transition-all font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg cursor-pointer">
+                    <button className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-[#13382f] text-[#DFFF5E] hover:bg-black transition-all font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg cursor-pointer">
                       <span>Live Demo</span>
                       <ExternalLink className="w-4 h-4" />
                     </button>

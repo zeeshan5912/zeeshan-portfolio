@@ -47,7 +47,7 @@ export function HeroSection() {
   ];
 
   return (
-    <section id="hero" className="relative bg-[#d4f938] text-[#13382f] pt-24 sm:pt-32 pb-0 overflow-hidden">
+    <section id="hero" className="relative bg-[#DFFF5E] text-[#13382f] pt-24 sm:pt-32 pb-0 overflow-hidden">
       {/* Corner Crosshair Decorations (+) */}
       <div className="absolute top-24 left-6 sm:left-10 text-2xl font-mono text-[#13382f]/30 select-none hidden md:block">
         +
@@ -101,7 +101,7 @@ export function HeroSection() {
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.96 }}
               onClick={handleScrollToProjects}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#13382f] text-[#d4f938] font-bold text-sm uppercase tracking-wider hover:bg-black transition-all shadow-xl hover:shadow-2xl cursor-pointer flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#13382f] text-[#DFFF5E] font-bold text-sm uppercase tracking-wider hover:bg-black transition-all shadow-xl hover:shadow-2xl cursor-pointer flex items-center justify-center gap-2 group"
             >
               <span>Explore Projects</span>
               <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
@@ -111,7 +111,7 @@ export function HeroSection() {
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.96 }}
               onClick={handleScrollToContact}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-transparent border-2 border-[#13382f] text-[#13382f] font-bold text-sm uppercase tracking-wider hover:bg-[#13382f] hover:text-[#d4f938] transition-all cursor-pointer flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-transparent border-2 border-[#13382f] text-[#13382f] font-bold text-sm uppercase tracking-wider hover:bg-[#13382f] hover:text-[#DFFF5E] transition-all cursor-pointer flex items-center justify-center gap-2"
             >
               <span>Contact Me</span>
               <ArrowUpRight className="w-4 h-4" />
@@ -145,7 +145,7 @@ export function HeroSection() {
                 onClick={() => setActiveMockupTab(idx)}
                 className={`px-3 py-1 text-[11px] font-bold rounded-full transition-all ${
                   activeMockupTab === idx
-                    ? "bg-[#13382f] text-[#d4f938] shadow-xs"
+                    ? "bg-[#13382f] text-[#DFFF5E] shadow-xs"
                     : "text-[#13382f] hover:bg-black/5"
                 }`}
               >
@@ -201,17 +201,17 @@ export function HeroSection() {
                       pos-system-architecture.app
                     </span>
                   </div>
-                  <span className="px-2.5 py-0.5 rounded-full bg-[#d4f938] text-[#13382f] text-[10px] font-extrabold uppercase">
+                  <span className="px-2.5 py-0.5 rounded-full bg-[#DFFF5E] text-[#13382f] text-[10px] font-extrabold uppercase">
                     Live Demo
                   </span>
                 </div>
 
                 <div className="space-y-3 sm:space-y-4">
                   <div className="h-44 sm:h-52 rounded-2xl bg-gradient-to-br from-[#13382f] via-[#184439] to-[#0e2922] p-4 sm:p-6 text-white flex flex-col justify-between relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-44 h-44 bg-[#d4f938]/15 rounded-full blur-2xl" />
+                    <div className="absolute top-0 right-0 w-44 h-44 bg-[#DFFF5E]/15 rounded-full blur-2xl" />
 
                     <div>
-                      <span className="text-[11px] sm:text-xs font-bold text-[#d4f938] uppercase tracking-wider block">
+                      <span className="text-[11px] sm:text-xs font-bold text-[#DFFF5E] uppercase tracking-wider block">
                         Production Application
                       </span>
                       <h3 className="text-lg sm:text-2xl font-extrabold tracking-tight mt-1 leading-snug">
@@ -223,7 +223,7 @@ export function HeroSection() {
                       <span className="font-mono text-slate-300 text-[11px] sm:text-xs">
                         Next.js · Tailwind · Redux
                       </span>
-                      <span className="font-bold text-[#d4f938] flex items-center gap-1 text-[11px] sm:text-xs">
+                      <span className="font-bold text-[#DFFF5E] flex items-center gap-1 text-[11px] sm:text-xs">
                         Sub-second Checkout <ArrowUpRight className="w-3.5 h-3.5" />
                       </span>
                     </div>
@@ -277,7 +277,7 @@ export function HeroSection() {
           <motion.div
             animate={{ x: [0, -1000] }}
             transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
-            className="inline-flex items-center gap-8 text-xs sm:text-sm font-bold uppercase tracking-widest text-[#d4f938]"
+            className="inline-flex items-center gap-8 text-xs sm:text-sm font-bold uppercase tracking-widest text-[#DFFF5E]"
           >
             {[...tickerItems, ...tickerItems].map((item, index) => (
               <span key={index} className="inline-flex items-center gap-3">
@@ -299,7 +299,7 @@ export function HeroSection() {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="flex flex-col items-center p-3 rounded-2xl bg-white/5 md:bg-transparent border border-white/5 md:border-none"
               >
-                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#d4f938] tracking-tight font-sans mb-1">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#DFFF5E] tracking-tight font-sans mb-1">
                   {stat.value}
                 </div>
                 <div className="text-xs sm:text-base font-bold text-white uppercase tracking-wider mb-0.5">

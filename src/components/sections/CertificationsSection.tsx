@@ -10,7 +10,7 @@ export function CertificationsSection() {
   return (
     <section id="certifications" className="relative">
       {/* 1. Neon Lime Green Banner (Matching Babun Figma Banner) */}
-      <div className="bg-[#d4f938] text-[#13382f] py-20 relative overflow-hidden">
+      <div className="bg-[#DFFF5E] text-[#13382f] py-20 relative overflow-hidden">
         {/* Corner Plus Accents */}
         <div className="absolute top-6 left-8 text-2xl font-mono text-[#13382f]/30 select-none hidden md:block">
           +

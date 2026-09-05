@@ -76,7 +76,7 @@ export function Navbar() {
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isScrolled
             ? "py-2.5 sm:py-3 bg-white/95 backdrop-blur-xl border-b border-slate-200/90 shadow-sm"
-            : "py-3.5 sm:py-5 bg-[#d4f938]"
+            : "py-3.5 sm:py-5 bg-[#DFFF5E]"
         )}
       >
         {/* Scroll Progress Bar */}
@@ -94,7 +94,7 @@ export function Navbar() {
               className="flex items-center gap-2 group cursor-pointer"
             >
               <div className="w-3.5 h-3.5 rounded-full bg-[#13382f] flex items-center justify-center group-hover:scale-110 transition-transform">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#d4f938] animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#DFFF5E] animate-pulse" />
               </div>
               <span className="font-extrabold text-lg sm:text-2xl text-[#13382f] tracking-tight font-sans">
                 {PERSONAL_INFO.name.split(" ")[0]}
@@ -144,8 +144,8 @@ export function Navbar() {
                 className={cn(
                   "px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer flex items-center gap-1.5 uppercase tracking-wider",
                   isScrolled
-                    ? "bg-[#13382f] text-[#d4f938] hover:bg-black shadow-sm"
-                    : "bg-transparent text-[#13382f] border-2 border-[#13382f] hover:bg-[#13382f] hover:text-[#d4f938]"
+                    ? "bg-[#13382f] text-[#DFFF5E] hover:bg-black shadow-sm"
+                    : "bg-transparent text-[#13382f] border-2 border-[#13382f] hover:bg-[#13382f] hover:text-[#DFFF5E]"
                 )}
               >
                 <span>Hire Me</span>
@@ -194,8 +194,8 @@ export function Navbar() {
               {/* Header inside drawer */}
               <div className="flex items-center justify-between pb-3 border-b border-emerald-800/80">
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#d4f938] animate-pulse" />
-                  <span className="text-xs text-[#d4f938] font-bold tracking-widest uppercase">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#DFFF5E] animate-pulse" />
+                  <span className="text-xs text-[#DFFF5E] font-bold tracking-widest uppercase">
                     Available for Hire
                   </span>
                 </div>
@@ -212,7 +212,7 @@ export function Navbar() {
                     key={item.label}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
-                    className="px-4 py-3 rounded-2xl text-base font-semibold text-slate-100 hover:text-[#d4f938] hover:bg-white/5 active:bg-white/10 transition-colors flex items-center justify-between"
+                    className="px-4 py-3 rounded-2xl text-base font-semibold text-slate-100 hover:text-[#DFFF5E] hover:bg-white/5 active:bg-white/10 transition-colors flex items-center justify-between"
                   >
                     <span>{item.label}</span>
                     <ArrowUpRight className="w-4 h-4 opacity-50" />
@@ -224,7 +224,7 @@ export function Navbar() {
               <div className="pt-3 border-t border-emerald-800/80 flex flex-col gap-2.5">
                 <button
                   onClick={handleHireClick}
-                  className="w-full py-3.5 rounded-full bg-[#d4f938] text-[#13382f] font-extrabold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg hover:bg-white transition-colors cursor-pointer"
+                  className="w-full py-3.5 rounded-full bg-[#DFFF5E] text-[#13382f] font-extrabold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg hover:bg-white transition-colors cursor-pointer"
                 >
                   <span>Let&apos;s Connect</span>
                   <Send className="w-4 h-4" />
@@ -236,7 +236,7 @@ export function Navbar() {
                   rel="noopener noreferrer"
                   className="w-full py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
                 >
-                  <Phone className="w-3.5 h-3.5 text-[#d4f938]" />
+                  <Phone className="w-3.5 h-3.5 text-[#DFFF5E]" />
                   <span>WhatsApp: {PERSONAL_INFO.phone}</span>
                 </a>
               </div>

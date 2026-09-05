@@ -6,8 +6,8 @@
 
 @layer base {
   :root {
-    --lime-accent: #d4f938;
-    --lime-hover: #c3e829;
+    --lime-accent: #DFFF5E;
+    --lime-hover: #cfee4a;
     --dark-green: #13382f;
     --dark-forest: #0e2922;
     --card-green: #184439;
@@ -27,7 +27,7 @@
   }
 
   ::selection {
-    background: #d4f938;
+    background: #DFFF5E;
     color: #13382f;
   }
 }
