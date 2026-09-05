@@ -267,7 +267,6 @@ export const CERTIFICATIONS: CertificationItem[] = [
     title: "React: Components, Context, and Accessibility",
     issuer: "LinkedIn Learning",
     date: "Sep 2025",
-    credentialId: "991dd84f863ccfc8a8f69dda3d81ca5a8ff2e2e1a37a2cfe0b92dd7184b69fee",
     image: "/linkedin.png",
     skills: ["React.js", "Context API", "Digital Accessibility", "Component Design"],
     badgeColor: "border-blue-500/30 text-blue-700 bg-blue-50",
