@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --lime-accent: #d4f938;
+    --lime-hover: #c3e829;
+    --dark-green: #13382f;
+    --dark-forest: #0e2922;
+    --card-green: #184439;
+    --cream-bg: #f8faf7;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-poppins), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #13382f;
+    font-family: var(--font-poppins), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #d4f938;
+    color: #13382f;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Crosshair decoration (+) */
+.corner-plus {
+  position: relative;
+}
+.corner-plus::before {
+  content: "+";
+  position: absolute;
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(19, 56, 47, 0.4);
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #13382f;
+  border-radius: 9999px;
+  border: 2px solid #f1f5f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e5648;
 }
