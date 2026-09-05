@@ -47,7 +47,7 @@ export function HeroSection() {
   ];
 
   return (
-    <section id="hero" className="relative bg-[#DFFF5E] text-[#13382f] pt-24 sm:pt-32 pb-0 overflow-hidden">
+    <section id="hero" className="relative bg-[#DFFF5E] text-[#13382f] pt-28 sm:pt-36 pb-0 overflow-hidden">
       {/* Corner Crosshair Decorations (+) */}
       <div className="absolute top-24 left-6 sm:left-10 text-2xl font-mono text-[#13382f]/30 select-none hidden md:block">
         +

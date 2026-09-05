@@ -3,34 +3,46 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Code,
-  Cpu,
-  Layers,
   Sparkles,
-  Zap,
   CheckCircle2,
   Shield,
   Layout,
   Server,
-  Workflow,
-  Globe2,
+  Terminal,
+  Zap,
+  Cpu,
 } from "lucide-react";
 import { Container } from "@/components/layout/Container";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import { PERSONAL_INFO } from "@/data/portfolioData";
 import { TiltCard } from "@/components/effects/TiltCard";
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 md:py-32 relative">
-      <Container>
-        <SectionHeader
-          badgeText="About Me"
-          badgeVariant="primary"
-          title="Engineering Modern"
-          highlightedText="Digital Experiences"
-          description="A look into my background, core development principles, and technical approach to frontend & full-stack development."
-        />
+    <section
+      id="about"
+      className="py-20 sm:py-32 bg-[#fbfdfb] text-[#13382f] relative scroll-mt-28 sm:scroll-mt-36 border-b border-slate-200/80 overflow-hidden"
+    >
+      {/* Subtle Background Accent Glows */}
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-[#DFFF5E]/20 rounded-full blur-[120px] pointer-events-none -z-10" />
+
+      <Container size="default">
+        {/* Section Header */}
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 sm:mb-16 px-2">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#13382f]/5 border border-[#13382f]/10 text-xs font-bold text-[#13382f] uppercase tracking-wider mb-3">
+            <span className="w-2 h-2 rounded-full bg-[#13382f]" />
+            <span>About Me &amp; Philosophy</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#13382f] tracking-tight leading-tight mb-4">
+            Engineering High-Performance{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10">Digital Experiences</span>
+              <span className="absolute bottom-1.5 left-0 right-0 h-3 bg-[#DFFF5E] -z-0 opacity-80 rounded-sm" />
+            </span>
+          </h2>
+          <p className="text-slate-600 text-sm sm:text-base max-w-xl leading-relaxed">
+            Frontend-focused MERN Stack engineer with a passion for clean UI, reusable component architectures, and silky smooth micro-interactions.
+          </p>
+        </div>
 
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
@@ -42,16 +54,14 @@ export function AboutSection() {
             transition={{ duration: 0.5 }}
             className="md:col-span-8"
           >
-            <TiltCard maxTilt={4} className="h-full">
-              <div className="h-full rounded-3xl bg-white/85 border border-slate-200/90 backdrop-blur-xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group hover:border-indigo-300 shadow-lg shadow-slate-200/40 transition-all">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-100/40 rounded-full blur-3xl pointer-events-none group-hover:bg-indigo-100/60 transition-all" />
-
+            <TiltCard maxTilt={3} className="h-full">
+              <div className="h-full rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group hover:border-[#13382f]/40 shadow-sm hover:shadow-xl transition-all">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center mb-6 shadow-xs">
+                  <div className="w-12 h-12 rounded-2xl bg-[#13382f] text-[#DFFF5E] flex items-center justify-center mb-6 shadow-md group-hover:scale-105 transition-transform">
                     <Layout className="w-6 h-6" />
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#13382f] mb-4 tracking-tight">
                     Frontend Focused, Full-Stack Capable
                   </h3>
 
@@ -63,10 +73,10 @@ export function AboutSection() {
                     {[
                       "Component-Driven Clean Architecture",
                       "Server-Side Rendering (SSR) & SEO",
-                      "Redux Global State Management",
+                      "Redux Toolkit Global State Management",
                       "High-Performance & Low-Latency UX",
                     ].map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-700">
+                      <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm text-[#13382f] font-medium">
                         <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                         <span>{item}</span>
                       </div>
@@ -75,14 +85,16 @@ export function AboutSection() {
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                  <span>Based in Lahore, Pakistan</span>
-                  <span className="text-indigo-600 font-semibold">1+ Year Production Experience</span>
+                  <span className="font-semibold text-slate-700">📍 Based in Lahore, Pakistan</span>
+                  <span className="px-3 py-1 rounded-full bg-[#13382f] text-[#DFFF5E] font-bold text-[11px] uppercase tracking-wider">
+                    1+ Year Production
+                  </span>
                 </div>
               </div>
             </TiltCard>
           </motion.div>
 
-          {/* Card 2: Clean Code & Architecture (4 cols) */}
+          {/* Card 2: Clean Architecture & Predictable State (4 cols) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -90,28 +102,30 @@ export function AboutSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="md:col-span-4"
           >
-            <TiltCard maxTilt={4} className="h-full">
-              <div className="h-full rounded-3xl bg-white/85 border border-slate-200/90 backdrop-blur-xl p-6 sm:p-8 flex flex-col justify-between group hover:border-sky-300 shadow-lg shadow-slate-200/40 transition-all">
+            <TiltCard maxTilt={3} className="h-full">
+              <div className="h-full rounded-3xl bg-[#13382f] text-white border border-emerald-800 p-6 sm:p-8 flex flex-col justify-between group hover:border-[#DFFF5E] shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#DFFF5E]/10 rounded-full blur-2xl pointer-events-none" />
+
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-sky-50 border border-sky-200 text-sky-600 flex items-center justify-center mb-6 shadow-xs">
+                  <div className="w-12 h-12 rounded-2xl bg-white/10 text-[#DFFF5E] flex items-center justify-center mb-6 shadow-xs group-hover:scale-105 transition-transform">
                     <Shield className="w-6 h-6" />
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
                     Clean Architecture
                   </h3>
 
-                  <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                    Writing maintainable, modular, and self-documenting code with clear separation between state, presentation, and data-fetching layers.
+                  <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                    Writing maintainable, modular, and self-documenting code with clear separation between state, presentation, and data layers.
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  {["Reusable Hook Abstractions", "Predictable Data Flow", "Strict Error Boundaries"].map(
+                  {["Reusable Custom Hooks", "Predictable Data Flow", "Strict Error Boundaries"].map(
                     (point, i) => (
                       <div
                         key={i}
-                        className="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700"
+                        className="px-3.5 py-2 rounded-xl bg-white/5 border border-emerald-700/50 text-xs font-semibold text-[#DFFF5E]"
                       >
                         {point}
                       </div>
@@ -122,7 +136,7 @@ export function AboutSection() {
             </TiltCard>
           </motion.div>
 
-          {/* Card 3: Backend & Data Management (4 cols) */}
+          {/* Card 3: Backend & Data Pipelines (4 cols) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -130,19 +144,19 @@ export function AboutSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="md:col-span-4"
           >
-            <TiltCard maxTilt={4} className="h-full">
-              <div className="h-full rounded-3xl bg-white/85 border border-slate-200/90 backdrop-blur-xl p-6 sm:p-8 flex flex-col justify-between group hover:border-emerald-300 shadow-lg shadow-slate-200/40 transition-all">
+            <TiltCard maxTilt={3} className="h-full">
+              <div className="h-full rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-8 flex flex-col justify-between group hover:border-[#13382f]/40 shadow-sm hover:shadow-xl transition-all">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mb-6 shadow-xs">
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 flex items-center justify-center mb-6 shadow-xs group-hover:scale-105 transition-transform">
                     <Server className="w-6 h-6" />
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#13382f] mb-3">
                     MERN Backend
                   </h3>
 
-                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                    Building resilient RESTful endpoints in Node.js and Express, coupled with MongoDB and Mongoose schemas for dependable data pipelines.
+                  <p className="text-slate-600 text-sm leading-relaxed mb-5">
+                    Building resilient RESTful endpoints in Node.js and Express, coupled with MongoDB schemas for dependable data pipelines.
                   </p>
                 </div>
 
@@ -150,7 +164,7 @@ export function AboutSection() {
                   {["Node.js", "Express.js", "MongoDB", "REST APIs", "Mongoose"].map((tech) => (
                     <span
                       key={tech}
-                      className="px-2.5 py-1 text-xs rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 font-medium"
+                      className="px-3 py-1 text-xs rounded-full bg-slate-100 text-slate-800 border border-slate-200 font-semibold"
                     >
                       {tech}
                     </span>
@@ -160,7 +174,7 @@ export function AboutSection() {
             </TiltCard>
           </motion.div>
 
-          {/* Card 4: Animation & User Delight (8 cols) */}
+          {/* Card 4: Animation & Micro-Interactions (8 cols) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -168,21 +182,21 @@ export function AboutSection() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="md:col-span-8"
           >
-            <TiltCard maxTilt={4} className="h-full">
-              <div className="h-full rounded-3xl bg-white/85 border border-slate-200/90 backdrop-blur-xl p-6 sm:p-8 flex flex-col justify-between group hover:border-purple-300 shadow-lg shadow-slate-200/40 transition-all relative overflow-hidden">
-                <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-purple-100/40 rounded-full blur-3xl pointer-events-none group-hover:bg-purple-100/60 transition-all" />
+            <TiltCard maxTilt={3} className="h-full">
+              <div className="h-full rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-8 flex flex-col justify-between group hover:border-[#13382f]/40 shadow-sm hover:shadow-xl transition-all relative overflow-hidden">
+                <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-[#DFFF5E]/25 rounded-full blur-3xl pointer-events-none" />
 
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-purple-50 border border-purple-200 text-purple-600 flex items-center justify-center mb-6 shadow-xs">
+                  <div className="w-12 h-12 rounded-2xl bg-[#DFFF5E] text-[#13382f] flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
                     <Sparkles className="w-6 h-6" />
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 tracking-tight">
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#13382f] mb-3 tracking-tight">
                     Micro-Interactions &amp; Fluid Motion
                   </h3>
 
                   <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
-                    I believe great software should feel alive. Leveraging Framer Motion and modern CSS, I craft meaningful transitions and physics-based gestures that elevate standard interfaces into memorable digital journeys.
+                    Great software should feel responsive and alive. Leveraging Framer Motion and modern Tailwind styling, I craft meaningful transitions, layout shifts, and physics-based gestures that turn standard interfaces into memorable digital products.
                   </p>
                 </div>
 
@@ -190,15 +204,15 @@ export function AboutSection() {
                   {[
                     { label: "60 FPS", desc: "Smooth Renders" },
                     { label: "Gesture Ready", desc: "Touch & Drag" },
-                    { label: "Responsive", desc: "All Screen Sizes" },
+                    { label: "Responsive", desc: "Adaptive Layouts" },
                     { label: "A11y First", desc: "Accessible UI" },
                   ].map((stat, i) => (
                     <div
                       key={i}
-                      className="p-3 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col"
+                      className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/90 flex flex-col"
                     >
-                      <span className="text-xs sm:text-sm font-bold text-slate-900">{stat.label}</span>
-                      <span className="text-[11px] text-slate-500">{stat.desc}</span>
+                      <span className="text-xs sm:text-sm font-extrabold text-[#13382f]">{stat.label}</span>
+                      <span className="text-[11px] text-slate-500 font-medium">{stat.desc}</span>
                     </div>
                   ))}
                 </div>

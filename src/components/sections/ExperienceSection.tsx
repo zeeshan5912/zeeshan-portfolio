@@ -8,7 +8,7 @@ import { EXPERIENCES } from "@/data/portfolioData";
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="relative">
+    <section id="experience" className="relative scroll-mt-28 sm:scroll-mt-36">
       {/* 1. Dark Forest Green Feature Banner with Circular Lime Badge (Matching Babun RTL Banner) */}
       <div className="bg-[#13382f] text-white py-20 relative overflow-hidden">
         {/* Corner Plus Accents */}

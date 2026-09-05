@@ -49,7 +49,7 @@ export function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="bg-[#13382f] text-white py-20 sm:py-32 relative overflow-hidden">
+    <section id="skills" className="bg-[#13382f] text-white py-20 sm:py-32 relative overflow-hidden scroll-mt-28 sm:scroll-mt-36">
       {/* Corner Plus Accents */}
       <div className="absolute top-8 left-8 text-2xl font-mono text-emerald-600/40 select-none hidden md:block">
         +

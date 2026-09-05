@@ -22,7 +22,7 @@ export function ProjectsSection() {
   });
 
   return (
-    <section id="projects" className="py-20 sm:py-32 bg-white text-[#13382f] relative">
+    <section id="projects" className="py-20 sm:py-32 bg-white text-[#13382f] relative scroll-mt-28 sm:scroll-mt-36">
       <Container size="default">
         {/* Section Header (Babun Demo Header) */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 sm:mb-16 px-2">

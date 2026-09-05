@@ -56,7 +56,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-32 bg-white text-[#13382f] relative">
+    <section id="contact" className="py-20 sm:py-32 bg-white text-[#13382f] relative scroll-mt-28 sm:scroll-mt-36">
       <Toast show={copied || isSubmitted} message={toastMsg} />
 
       <Container size="default">

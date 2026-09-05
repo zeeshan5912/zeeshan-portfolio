@@ -75,8 +75,8 @@ export function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isScrolled
-            ? "py-2.5 sm:py-3 bg-white/95 backdrop-blur-xl border-b border-slate-200/90 shadow-sm"
-            : "py-3.5 sm:py-5 bg-[#DFFF5E]"
+            ? "py-5 sm:py-7 bg-white/95 backdrop-blur-xl border-b border-slate-200/90 shadow-sm"
+            : "py-5 sm:py-7 bg-[#DFFF5E]"
         )}
       >
         {/* Scroll Progress Bar */}
@@ -189,7 +189,7 @@ export function Navbar() {
               exit={{ opacity: 0, y: -20, scale: 0.98 }}
               transition={{ type: "spring", stiffness: 350, damping: 28 }}
               onClick={(e) => e.stopPropagation()}
-              className="absolute inset-x-4 top-20 bg-[#13382f] text-white rounded-3xl p-6 shadow-2xl flex flex-col gap-4 border border-emerald-700/50 max-h-[85vh] overflow-y-auto"
+              className="absolute inset-x-4 top-24 sm:top-28 bg-[#13382f] text-white rounded-3xl p-6 shadow-2xl flex flex-col gap-4 border border-emerald-700/50 max-h-[85vh] overflow-y-auto"
             >
               {/* Header inside drawer */}
               <div className="flex items-center justify-between pb-3 border-b border-emerald-800/80">

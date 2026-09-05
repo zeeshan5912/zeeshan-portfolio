@@ -72,7 +72,7 @@ export function CertificationsSection() {
   });
 
   return (
-    <section id="certifications" className="relative">
+    <section id="certifications" className="relative scroll-mt-28 sm:scroll-mt-36">
       {/* 1. Neon Lime Green Banner (Babun Figma Clean Code Banner) */}
       <div className="bg-[#DFFF5E] text-[#13382f] py-20 relative overflow-hidden border-b border-black/5">
         {/* Decorative corner crosshairs */}

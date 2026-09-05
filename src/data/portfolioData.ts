@@ -25,9 +25,9 @@ export const PERSONAL_INFO: ContactInfo = {
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "Skills", href: "#skills" },
   { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];
