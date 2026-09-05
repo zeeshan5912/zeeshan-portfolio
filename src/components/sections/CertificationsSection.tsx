@@ -90,10 +90,10 @@ export function CertificationsSection() {
               <Code2 className="w-8 h-8 text-[#13382f]" />
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#13382f] tracking-tight leading-tight mb-3">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#13382f] tracking-tight leading-tight mb-3">
               Clean Architecture &amp; Reusable Components in Every Project.
             </h2>
-            <p className="text-sm sm:text-base font-semibold text-[#13382f]/80 max-w-xl">
+            <p className="text-sm sm:text-base font-normal text-[#13382f]/80 max-w-xl">
               Strict component separation, custom hook abstractions, and maintainable state logic.
             </p>
           </div>
@@ -110,30 +110,30 @@ export function CertificationsSection() {
         <Container size="default">
           {/* Section Header */}
           <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14 relative z-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-emerald-800/15 shadow-sm text-xs font-bold text-[#13382f] uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-emerald-800/15 shadow-sm text-xs font-medium text-[#13382f] uppercase tracking-wider mb-4">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>Verified Qualifications</span>
             </div>
 
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#13382f] tracking-tight mb-4">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#13382f] tracking-tight mb-4">
               Verified Technical Certifications
             </h3>
 
-            <p className="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+            <p className="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed font-normal">
               Official accreditations validating real-world competencies in modern React.js architecture, responsive layout engineering, and accessible web systems.
             </p>
 
             {/* Quick Metrics Pills */}
             <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 mt-6">
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200/90 text-[11px] sm:text-xs font-bold text-slate-700 shadow-sm">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200/90 text-[11px] sm:text-xs font-medium text-slate-700 shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-[#13382f]" />
                 <span>4 Official Credentials</span>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200/90 text-[11px] sm:text-xs font-bold text-slate-700 shadow-sm">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200/90 text-[11px] sm:text-xs font-medium text-slate-700 shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span>100% Online Verified</span>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200/90 text-[11px] sm:text-xs font-bold text-slate-700 shadow-sm">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200/90 text-[11px] sm:text-xs font-medium text-slate-700 shadow-sm">
                 <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                 <span>React &amp; Web Standards</span>
               </div>
@@ -145,7 +145,7 @@ export function CertificationsSection() {
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
-                  className={`px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-sm ${
+                  className={`px-4 py-2 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer shadow-sm ${
                     activeFilter === filter
                       ? "bg-[#13382f] text-[#DFFF5E] shadow-md scale-105"
                       : "bg-white text-slate-600 hover:text-[#13382f] hover:bg-slate-50 border border-slate-200"
@@ -176,12 +176,12 @@ export function CertificationsSection() {
                       <span className="w-2.5 h-2.5 rounded-full bg-red-400/80" />
                       <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80" />
                       <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/80" />
-                      <span className="text-[10px] font-mono font-bold text-slate-500 ml-2 tracking-wide uppercase">
+                      <span className="text-[10px] font-mono font-medium text-slate-500 ml-2 tracking-wide uppercase">
                         {cert.issuer}
                       </span>
                     </div>
 
-                    <div className="flex items-center gap-1 text-[11px] font-bold text-emerald-700">
+                    <div className="flex items-center gap-1 text-[11px] font-medium text-emerald-700">
                       <CheckCircle2 className="w-3.5 h-3.5" />
                       <span>Verified</span>
                     </div>
@@ -203,7 +203,7 @@ export function CertificationsSection() {
 
                       {/* Frosted Hover Inspection Layer */}
                       <div className="absolute inset-0 bg-gradient-to-t from-[#13382f]/90 via-[#13382f]/40 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                        <div className="px-5 py-2.5 rounded-full bg-[#DFFF5E] text-[#13382f] font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 shadow-xl transform translate-y-3 group-hover/img:translate-y-0 transition-transform duration-300">
+                        <div className="px-5 py-2.5 rounded-full bg-[#DFFF5E] text-[#13382f] font-semibold text-xs uppercase tracking-wider flex items-center gap-2 shadow-xl transform translate-y-3 group-hover/img:translate-y-0 transition-transform duration-300">
                           <Eye className="w-4 h-4" />
                           <span>Inspect Full Certificate</span>
                         </div>
@@ -211,7 +211,7 @@ export function CertificationsSection() {
 
                       {/* Glowing Corner Badge */}
                       <div className="absolute top-3 left-3">
-                        <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/95 backdrop-blur-md text-[#13382f] shadow-md border border-slate-200/90 flex items-center gap-1.5">
+                        <span className="px-3 py-1 rounded-full text-xs font-medium bg-white/95 backdrop-blur-md text-[#13382f] shadow-md border border-slate-200/90 flex items-center gap-1.5">
                           <Award className="w-3.5 h-3.5 text-emerald-700" />
                           <span>{cert.issuer}</span>
                         </span>
@@ -236,7 +236,7 @@ export function CertificationsSection() {
                   <div className="p-6 flex flex-col flex-grow justify-between gap-5">
                     <div>
                       {/* Meta Info Row (Date & Credential ID with Copy) */}
-                      <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500 mb-2.5 font-medium">
+                      <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500 mb-2.5 font-normal">
                         {cert.date && (
                           <span className="flex items-center gap-1">
                             <Calendar className="w-3.5 h-3.5 text-slate-400" />
@@ -262,7 +262,7 @@ export function CertificationsSection() {
                       </div>
 
                       {/* Certificate Title */}
-                      <h4 className="text-lg sm:text-xl font-extrabold text-[#13382f] tracking-tight leading-snug group-hover:text-emerald-800 transition-colors">
+                      <h4 className="text-lg sm:text-xl font-semibold text-[#13382f] tracking-tight leading-snug group-hover:text-emerald-800 transition-colors">
                         {cert.title}
                       </h4>
 
@@ -271,7 +271,7 @@ export function CertificationsSection() {
                         {cert.skills.map((skill) => (
                           <span
                             key={skill}
-                            className="text-[11px] font-semibold text-slate-600 bg-slate-50 hover:bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200 transition-colors"
+                            className="text-[11px] font-normal text-slate-600 bg-slate-50 hover:bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200 transition-colors"
                           >
                             {skill}
                           </span>
@@ -283,7 +283,7 @@ export function CertificationsSection() {
                     <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
                       <button
                         onClick={() => setSelectedCert(cert)}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-100 hover:bg-[#13382f] text-slate-700 hover:text-[#DFFF5E] text-xs font-bold transition-all cursor-pointer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-100 hover:bg-[#13382f] text-slate-700 hover:text-[#DFFF5E] text-xs font-medium transition-all cursor-pointer"
                       >
                         <Eye className="w-3.5 h-3.5" />
                         <span>Preview Certificate</span>
@@ -294,14 +294,14 @@ export function CertificationsSection() {
                           href={cert.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-950 transition-colors py-1"
+                          className="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-700 hover:text-emerald-950 transition-colors py-1"
                         >
                           <FileCheck2 className="w-3.5 h-3.5" />
                           <span>Online Credential</span>
                           <ExternalLink className="w-3 h-3 ml-0.5" />
                         </a>
                       ) : (
-                        <span className="inline-flex items-center gap-1 text-xs font-bold text-slate-500">
+                        <span className="inline-flex items-center gap-1 text-xs font-normal text-slate-500">
                           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
                           <span>Certified</span>
                         </span>

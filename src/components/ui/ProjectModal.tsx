@@ -66,10 +66,10 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               </button>
 
               <div className="relative z-10">
-                <span className="px-3 py-1 rounded-full bg-[#13382f] text-[#DFFF5E] text-[10px] font-extrabold uppercase tracking-wider mb-2 inline-block">
+                <span className="px-3 py-1 rounded-full bg-[#13382f] text-[#DFFF5E] text-[10px] font-medium uppercase tracking-wider mb-2 inline-block">
                   {project.category}
                 </span>
-                <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
+                <h3 className="text-xl sm:text-3xl font-bold text-white tracking-tight">
                   {project.title}
                 </h3>
               </div>
@@ -79,10 +79,10 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             <div className="p-5 sm:p-8 space-y-5 sm:space-y-6 max-h-[65vh] sm:max-h-[70vh] overflow-y-auto custom-scrollbar">
               {/* Description */}
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-[#13382f] mb-2 flex items-center gap-2">
+                <h4 className="text-xs font-medium uppercase tracking-wider text-[#13382f] mb-2 flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-[#13382f]" /> Overview &amp; Purpose
                 </h4>
-                <p className="text-slate-700 leading-relaxed text-xs sm:text-sm">
+                <p className="text-slate-700 leading-relaxed text-xs sm:text-sm font-normal">
                   {project.longDescription}
                 </p>
               </div>
@@ -94,20 +94,20 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     key={idx}
                     className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col gap-1"
                   >
-                    <span className="text-[10px] font-bold text-[#13382f] uppercase">Feature 0{idx + 1}</span>
-                    <span className="text-xs font-semibold text-slate-800">{h}</span>
+                    <span className="text-[10px] font-medium text-[#13382f] uppercase">Feature 0{idx + 1}</span>
+                    <span className="text-xs font-normal text-slate-800">{h}</span>
                   </div>
                 ))}
               </div>
 
               {/* Full Features Breakdown */}
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-[#13382f] mb-3 flex items-center gap-2">
+                <h4 className="text-xs font-medium uppercase tracking-wider text-[#13382f] mb-3 flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-emerald-600" /> Architectural Features &amp; Deliverables
                 </h4>
                 <ul className="space-y-2">
                   {project.features.map((feat, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                    <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 font-normal">
                       <span className="h-1.5 w-1.5 rounded-full bg-[#13382f] mt-2 shrink-0" />
                       <span>{feat}</span>
                     </li>
@@ -117,14 +117,14 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
               {/* Technologies Used */}
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-[#13382f] mb-3 flex items-center gap-2">
+                <h4 className="text-xs font-medium uppercase tracking-wider text-[#13382f] mb-3 flex items-center gap-2">
                   <Layers className="w-4 h-4 text-emerald-700" /> Technology Stack
                 </h4>
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-xs font-semibold rounded-lg bg-slate-100 text-[#13382f] border border-slate-200"
+                      className="px-3 py-1 text-xs font-normal rounded-lg bg-slate-100 text-[#13382f] border border-slate-200"
                     >
                       {tech}
                     </span>
@@ -141,7 +141,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto"
                   >
-                    <button className="w-full sm:w-auto px-5 py-2.5 rounded-full border-2 border-[#13382f] text-[#13382f] hover:bg-[#13382f] hover:text-[#DFFF5E] transition-all font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer">
+                    <button className="w-full sm:w-auto px-5 py-2.5 rounded-full border-2 border-[#13382f] text-[#13382f] hover:bg-[#13382f] hover:text-[#DFFF5E] transition-all font-medium text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer">
                       <GitHubIcon className="w-4 h-4" />
                       <span>View Code</span>
                     </button>
@@ -154,7 +154,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto"
                   >
-                    <button className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-[#13382f] text-[#DFFF5E] hover:bg-black transition-all font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg cursor-pointer">
+                    <button className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-[#13382f] text-[#DFFF5E] hover:bg-black transition-all font-medium text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg cursor-pointer">
                       <span>Live Demo</span>
                       <ExternalLink className="w-4 h-4" />
                     </button>

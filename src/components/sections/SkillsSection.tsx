@@ -61,13 +61,13 @@ export function SkillsSection() {
       <Container size="default">
         {/* Title (Babun Core Features Header) */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 px-2">
-          <span className="text-xs font-bold text-[#DFFF5E] uppercase tracking-widest mb-2 sm:mb-3 block">
+          <span className="text-xs font-medium text-[#DFFF5E] uppercase tracking-widest mb-2 sm:mb-3 block">
             Technical Arsenal
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
             Core Features &amp; Capabilities
           </h2>
-          <p className="text-slate-300 text-xs sm:text-sm mt-3 max-w-lg mx-auto">
+          <p className="text-slate-300 text-xs sm:text-sm mt-3 max-w-lg mx-auto font-normal">
             Full-stack engineering stack built on component-driven principles, fast render cycles, and clean patterns.
           </p>
         </div>
@@ -91,10 +91,10 @@ export function SkillsSection() {
               </div>
 
               {/* Title & Desc */}
-              <h3 className="text-xs sm:text-base font-bold text-white mb-1 group-hover:text-[#DFFF5E] transition-colors leading-tight">
+              <h3 className="text-xs sm:text-base font-medium text-white mb-1 group-hover:text-[#DFFF5E] transition-colors leading-tight">
                 {feat.title}
               </h3>
-              <p className="text-[10px] sm:text-[11px] text-slate-300 leading-tight">
+              <p className="text-[10px] sm:text-[11px] text-slate-300 leading-tight font-normal">
                 {feat.desc}
               </p>
             </motion.div>
@@ -103,7 +103,7 @@ export function SkillsSection() {
 
         {/* Additional Tools Pill Cloud */}
         <div className="mt-12 sm:mt-16 pt-8 border-t border-emerald-800/60 flex flex-col items-center text-center">
-          <span className="text-[11px] uppercase font-bold tracking-widest text-[#DFFF5E] mb-4">
+          <span className="text-[11px] uppercase font-medium tracking-widest text-[#DFFF5E] mb-4">
             Complementary Tooling &amp; Libraries
           </span>
           <div className="flex flex-wrap items-center justify-center gap-2 max-w-3xl">

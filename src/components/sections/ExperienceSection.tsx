@@ -21,30 +21,30 @@ export function ExperienceSection() {
 
         <Container size="default">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-8">
               Engineered with Modern <span className="text-[#DFFF5E]">SSR &amp; MERN</span>
             </h2>
 
             {/* Overlapping Mockup Cards in Forest Green */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full mb-10 opacity-90">
               <div className="p-4 rounded-2xl bg-[#184439] border border-emerald-700/50 text-left">
-                <span className="text-[#DFFF5E] font-bold text-sm block mb-1">Clean State</span>
+                <span className="text-[#DFFF5E] font-medium text-sm block mb-1">Clean State</span>
                 <p className="text-xs text-slate-300">Redux Toolkit with persistent hydration and actions.</p>
               </div>
               <div className="p-4 rounded-2xl bg-[#184439] border border-emerald-700/50 text-left">
-                <span className="text-[#DFFF5E] font-bold text-sm block mb-1">SSR Performance</span>
+                <span className="text-[#DFFF5E] font-medium text-sm block mb-1">SSR Performance</span>
                 <p className="text-xs text-slate-300">Next.js App Router for instant load times and SEO.</p>
               </div>
               <div className="p-4 rounded-2xl bg-[#184439] border border-emerald-700/50 text-left">
-                <span className="text-[#DFFF5E] font-bold text-sm block mb-1">MERN APIs</span>
+                <span className="text-[#DFFF5E] font-medium text-sm block mb-1">MERN APIs</span>
                 <p className="text-xs text-slate-300">Robust Node.js &amp; Express endpoints with MongoDB.</p>
               </div>
             </div>
 
             {/* Circular Neon Lime Accent Badge (Babun Center Badge) */}
-            <div className="w-24 h-24 rounded-full bg-[#DFFF5E] text-[#13382f] flex flex-col items-center justify-center font-black shadow-2xl border-4 border-[#13382f] transform hover:scale-110 transition-transform cursor-default">
-              <span className="text-sm font-extrabold tracking-widest uppercase">MERN</span>
-              <span className="text-[10px] font-bold tracking-tighter">Stack</span>
+            <div className="w-24 h-24 rounded-full bg-[#DFFF5E] text-[#13382f] flex flex-col items-center justify-center font-bold shadow-2xl border-4 border-[#13382f] transform hover:scale-110 transition-transform cursor-default">
+              <span className="text-sm font-bold tracking-widest uppercase">MERN</span>
+              <span className="text-[10px] font-medium tracking-tighter">Stack</span>
             </div>
           </div>
         </Container>
@@ -55,12 +55,12 @@ export function ExperienceSection() {
         <Container size="default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
             <div className="lg:col-span-7">
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#13382f] tracking-tight leading-tight">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#13382f] tracking-tight leading-tight">
                 Fast Loading Time &amp; Super Smooth UX.
               </h3>
             </div>
             <div className="lg:col-span-5">
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
                 Writing clean, component-driven code optimized for 60 FPS animations, sub-second API responses, and 100/100 Lighthouse performance metrics.
               </p>
             </div>
@@ -70,10 +70,10 @@ export function ExperienceSection() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {/* Card 1: 5.0 Rating */}
             <div className="rounded-3xl bg-white p-6 sm:p-8 border border-slate-200/80 shadow-md text-center flex flex-col items-center">
-              <div className="text-4xl font-black text-[#13382f] mb-1 font-sans">
+              <div className="text-4xl font-bold text-[#13382f] mb-1 font-sans">
                 5.00
               </div>
-              <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">
+              <div className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-3">
                 Code Quality Score
               </div>
               <div className="flex items-center gap-1 text-amber-400">
@@ -85,26 +85,26 @@ export function ExperienceSection() {
 
             {/* Card 2: 99% Speed */}
             <div className="rounded-3xl bg-white p-6 sm:p-8 border border-slate-200/80 shadow-md text-center flex flex-col items-center">
-              <div className="text-4xl font-black text-[#13382f] mb-1 font-sans">
+              <div className="text-4xl font-bold text-[#13382f] mb-1 font-sans">
                 99%
               </div>
-              <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+              <div className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-2">
                 Performance &amp; SEO
               </div>
-              <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+              <span className="text-xs font-medium text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
                 Lighthouse Verified
               </span>
             </div>
 
             {/* Card 3: 100% Modularity */}
             <div className="rounded-3xl bg-white p-6 sm:p-8 border border-slate-200/80 shadow-md text-center flex flex-col items-center">
-              <div className="text-4xl font-black text-[#13382f] mb-1 font-sans">
+              <div className="text-4xl font-bold text-[#13382f] mb-1 font-sans">
                 100%
               </div>
-              <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+              <div className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-2">
                 Responsive Delivery
               </div>
-              <span className="text-xs font-semibold text-indigo-700 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200">
+              <span className="text-xs font-medium text-indigo-700 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200">
                 All Screen Formats
               </span>
             </div>
@@ -116,10 +116,10 @@ export function ExperienceSection() {
       <div className="bg-white py-20">
         <Container size="default">
           <div className="max-w-3xl mx-auto text-center mb-14">
-            <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">
+            <span className="text-xs font-medium text-slate-500 uppercase tracking-widest mb-2 block">
               Career Journey
             </span>
-            <h3 className="text-3xl sm:text-4xl font-extrabold text-[#13382f] tracking-tight">
+            <h3 className="text-3xl sm:text-4xl font-bold text-[#13382f] tracking-tight">
               Work Experience &amp; Positions
             </h3>
           </div>
@@ -131,25 +131,25 @@ export function ExperienceSection() {
                 className="rounded-3xl bg-slate-50 border-2 border-slate-200/80 p-6 sm:p-8 hover:border-[#13382f] transition-all duration-300"
               >
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-                  <span className="px-3 py-1 rounded-full bg-[#13382f] text-[#DFFF5E] text-xs font-bold uppercase tracking-wider">
+                  <span className="px-3 py-1 rounded-full bg-[#13382f] text-[#DFFF5E] text-xs font-medium uppercase tracking-wider">
                     {exp.period}
                   </span>
-                  <span className="text-xs font-semibold text-slate-500 flex items-center gap-1">
+                  <span className="text-xs font-normal text-slate-500 flex items-center gap-1">
                     <MapPin className="w-3.5 h-3.5" />
                     {exp.location}
                   </span>
                 </div>
 
-                <h4 className="text-2xl font-bold text-[#13382f] mb-1">
+                <h4 className="text-xl sm:text-2xl font-semibold text-[#13382f] mb-1">
                   {exp.role}
                 </h4>
-                <div className="text-sm font-bold text-slate-700 mb-5">
+                <div className="text-sm font-medium text-slate-700 mb-5">
                   {exp.company}
                 </div>
 
                 <ul className="space-y-2 mb-6">
                   {exp.achievements.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600">
+                    <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600 font-normal">
                       <span className="h-1.5 w-1.5 rounded-full bg-[#13382f] mt-2 shrink-0" />
                       <span>{item}</span>
                     </li>
@@ -160,7 +160,7 @@ export function ExperienceSection() {
                   {exp.technologies.map((t) => (
                     <span
                       key={t}
-                      className="px-2.5 py-1 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-700"
+                      className="px-2.5 py-1 text-xs font-normal rounded-lg bg-white border border-slate-200 text-slate-700"
                     >
                       {t}
                     </span>

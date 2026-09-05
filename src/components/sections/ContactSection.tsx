@@ -67,12 +67,12 @@ export function ContactSection() {
             <div className="w-3.5 h-3.5 rounded-full bg-[#13382f] flex items-center justify-center">
               <span className="w-1.5 h-1.5 rounded-full bg-[#DFFF5E]" />
             </div>
-            <span className="font-extrabold text-base sm:text-lg text-[#13382f] tracking-tight">
+            <span className="font-bold text-base sm:text-lg text-[#13382f] tracking-tight">
               {PERSONAL_INFO.name}
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#13382f] tracking-tight leading-tight mb-5 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#13382f] tracking-tight leading-tight mb-5 sm:mb-6">
             Let&apos;s Build an Exceptional Web Experience Together!
           </h2>
 
@@ -83,7 +83,7 @@ export function ContactSection() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={triggerConfetti}
-            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#13382f] text-[#DFFF5E] font-bold text-sm uppercase tracking-wider hover:bg-black transition-all shadow-xl hover:shadow-2xl cursor-pointer flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#13382f] text-[#DFFF5E] font-medium text-sm uppercase tracking-wider hover:bg-black transition-all shadow-xl hover:shadow-2xl cursor-pointer flex items-center justify-center gap-2"
           >
             <span>Start WhatsApp Chat</span>
             <ArrowRight className="w-4 h-4" />
@@ -106,10 +106,10 @@ export function ContactSection() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="min-w-0">
-                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+                  <span className="text-[11px] font-medium text-slate-500 uppercase tracking-wider block">
                     Email Address
                   </span>
-                  <span className="text-xs sm:text-sm font-bold text-[#13382f] truncate block">
+                  <span className="text-xs sm:text-sm font-medium text-[#13382f] truncate block">
                     {PERSONAL_INFO.email}
                   </span>
                 </div>
@@ -129,10 +129,10 @@ export function ContactSection() {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div className="min-w-0">
-                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+                  <span className="text-[11px] font-medium text-slate-500 uppercase tracking-wider block">
                     Phone / WhatsApp
                   </span>
-                  <span className="text-xs sm:text-sm font-bold text-[#13382f] truncate block">
+                  <span className="text-xs sm:text-sm font-medium text-[#13382f] truncate block">
                     {PERSONAL_INFO.phone}
                   </span>
                 </div>
@@ -155,10 +155,10 @@ export function ContactSection() {
                     <LinkedInIcon className="w-5 h-5" />
                   </div>
                   <div className="min-w-0">
-                    <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+                    <span className="text-[11px] font-medium text-slate-500 uppercase tracking-wider block">
                       LinkedIn Network
                     </span>
-                    <span className="text-xs sm:text-sm font-bold text-[#13382f] truncate block">
+                    <span className="text-xs sm:text-sm font-medium text-[#13382f] truncate block">
                       ch-zeeshan-akram
                     </span>
                   </div>
@@ -170,8 +170,8 @@ export function ContactSection() {
             {/* Location Tag */}
             <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200/80 flex items-center gap-3">
               <MapPin className="w-5 h-5 text-emerald-800 shrink-0" />
-              <div className="text-xs text-emerald-900 font-medium">
-                <span className="font-bold block">Lahore, Pakistan</span>
+              <div className="text-xs text-emerald-900 font-normal">
+                <span className="font-medium block">Lahore, Pakistan</span>
                 Available for local on-site, hybrid, and worldwide remote roles.
               </div>
             </div>
@@ -180,17 +180,17 @@ export function ContactSection() {
           {/* Contact Message Form (7 cols) */}
           <div className="lg:col-span-7">
             <div className="rounded-3xl bg-slate-50 border-2 border-slate-200/80 p-5 sm:p-8 shadow-sm">
-              <h3 className="text-xl font-bold text-[#13382f] mb-1">
+              <h3 className="text-lg sm:text-xl font-semibold text-[#13382f] mb-1">
                 Send a Direct Message
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 mb-5">
+              <p className="text-xs sm:text-sm text-slate-600 mb-5 font-normal">
                 Leave a message and I&apos;ll get back to you within 24 hours.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
                       Your Name *
                     </label>
                     <input
@@ -204,7 +204,7 @@ export function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
                       Your Email *
                     </label>
                     <input
@@ -219,7 +219,7 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
                     Subject
                   </label>
                   <input
@@ -232,7 +232,7 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
                     Message *
                   </label>
                   <textarea
@@ -249,7 +249,7 @@ export function ContactSection() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="w-full py-3.5 rounded-full bg-[#13382f] text-[#DFFF5E] font-bold text-sm uppercase tracking-wider hover:bg-black transition-all cursor-pointer flex items-center justify-center gap-2 shadow-lg"
+                  className="w-full py-3.5 rounded-full bg-[#13382f] text-[#DFFF5E] font-medium text-sm uppercase tracking-wider hover:bg-black transition-all cursor-pointer flex items-center justify-center gap-2 shadow-lg"
                 >
                   <span>Submit Message</span>
                   <Send className="w-4 h-4" />

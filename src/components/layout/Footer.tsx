@@ -39,13 +39,13 @@ export function Footer() {
             <div className="w-3.5 h-3.5 rounded-full bg-[#DFFF5E] flex items-center justify-center">
               <span className="w-1.5 h-1.5 rounded-full bg-[#13382f]" />
             </div>
-            <span className="font-extrabold text-xl text-white tracking-tight">
+            <span className="font-bold text-xl text-white tracking-tight">
               {PERSONAL_INFO.name}
             </span>
           </div>
 
           {/* Quick Nav Links */}
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-semibold text-slate-300">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-normal text-slate-300">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.label}
@@ -70,7 +70,7 @@ export function Footer() {
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 text-slate-300 hover:text-[#DFFF5E] transition-colors font-bold uppercase tracking-wider cursor-pointer py-1"
+            className="flex items-center gap-1.5 text-slate-300 hover:text-[#DFFF5E] transition-colors font-medium uppercase tracking-wider cursor-pointer py-1"
           >
             <span>Back to top</span>
             <ArrowUp className="w-3.5 h-3.5" />
