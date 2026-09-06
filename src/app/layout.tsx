@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const josefinSans = Josefin_Sans({
+  variable: "--font-josefin",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -47,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} scroll-smooth`}>
+    <html lang="en" className={`${josefinSans.variable} scroll-smooth`}>
       <body className="min-h-screen bg-white text-[#13382f] antialiased font-sans flex flex-col selection:bg-[#DFFF5E] selection:text-[#13382f]">
         {children}
       </body>

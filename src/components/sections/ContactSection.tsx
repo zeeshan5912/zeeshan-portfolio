@@ -7,13 +7,11 @@ import {
   Phone,
   MapPin,
   Send,
-  MessageSquare,
   Copy,
-  CheckCircle2,
   ArrowRight,
-  Sparkles,
 } from "lucide-react";
 import { LinkedInIcon } from "@/components/ui/Icons";
+import { Logo } from "@/components/ui/Logo";
 import { Container } from "@/components/layout/Container";
 import { PERSONAL_INFO } from "@/data/portfolioData";
 import { triggerConfetti } from "@/lib/confetti";
@@ -62,18 +60,19 @@ export function ContactSection() {
       <Container size="default">
         {/* Babun Bottom Centered CTA */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 sm:mb-16 px-2">
-          {/* Logo with Green Dot (Babun Bottom Brand) */}
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-3.5 h-3.5 rounded-full bg-[#13382f] flex items-center justify-center">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#DFFF5E]" />
-            </div>
-            <span className="font-bold text-base sm:text-lg text-[#13382f] tracking-tight">
-              {PERSONAL_INFO.name}
-            </span>
-          </div>
+          {/* Brand Logo & Section Badge */}
+          <Logo size="sm" variant="compact" theme="scrolled" className="mb-2" />
+          <span className="text-xs font-medium text-slate-500 uppercase tracking-widest mb-2 sm:mb-3 block">
+            Get In Touch
+          </span>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#13382f] tracking-tight leading-tight mb-5 sm:mb-6">
-            Let&apos;s Build an Exceptional Web Experience Together!
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#13382f] tracking-tight leading-tight mb-5 sm:mb-6">
+            Let&apos;s Build an{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10">Exceptional Web Experience</span>
+              <span className="absolute bottom-1.5 left-0 right-0 h-3 bg-[#DFFF5E] -z-0 opacity-80 rounded-sm" />
+            </span>{" "}
+            Together!
           </h2>
 
           <motion.a

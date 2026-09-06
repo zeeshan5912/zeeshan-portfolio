@@ -21,8 +21,12 @@ export function ExperienceSection() {
 
         <Container size="default">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-8">
-              Engineered with Modern <span className="text-[#DFFF5E]">SSR &amp; MERN</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-8">
+              Engineered with Modern{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10 text-[#DFFF5E]">SSR &amp; MERN</span>
+                <span className="absolute bottom-1.5 left-0 right-0 h-3 bg-[#DFFF5E]/20 -z-0 rounded-sm" />
+              </span>
             </h2>
 
             {/* Overlapping Mockup Cards in Forest Green */}
@@ -55,8 +59,12 @@ export function ExperienceSection() {
         <Container size="default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
             <div className="lg:col-span-7">
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#13382f] tracking-tight leading-tight">
-                Fast Loading Time &amp; Super Smooth UX.
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#13382f] tracking-tight leading-tight">
+                Fast Loading Time &amp;{" "}
+                <span className="relative inline-block">
+                  <span className="relative z-10">Super Smooth UX.</span>
+                  <span className="absolute bottom-1.5 left-0 right-0 h-3 bg-[#DFFF5E] -z-0 opacity-80 rounded-sm" />
+                </span>
               </h3>
             </div>
             <div className="lg:col-span-5">
@@ -119,8 +127,12 @@ export function ExperienceSection() {
             <span className="text-xs font-medium text-slate-500 uppercase tracking-widest mb-2 block">
               Career Journey
             </span>
-            <h3 className="text-3xl sm:text-4xl font-bold text-[#13382f] tracking-tight">
-              Work Experience &amp; Positions
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#13382f] tracking-tight leading-tight mb-4">
+              Work Experience &amp;{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10">Positions</span>
+                <span className="absolute bottom-1.5 left-0 right-0 h-3 bg-[#DFFF5E] -z-0 opacity-80 rounded-sm" />
+              </span>
             </h3>
           </div>
 

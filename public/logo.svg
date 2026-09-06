@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 100" width="100%" height="100%">
+  <defs>
+    <!-- Theme Neon Lime Gradient -->
+    <linearGradient id="logoLime" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBFFBD"/>
+      <stop offset="45%" stop-color="#DFFF5E"/>
+      <stop offset="100%" stop-color="#B3E619"/>
+    </linearGradient>
+
+    <!-- Deep Obsidian Emerald Badge Gradient -->
+    <linearGradient id="logoBgDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#164338"/>
+      <stop offset="50%" stop-color="#13382F"/>
+      <stop offset="100%" stop-color="#0B231D"/>
+    </linearGradient>
+
+    <!-- Border Stroke -->
+    <linearGradient id="logoBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFFF5E" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#256B59" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#DFFF5E" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <radialGradient id="logoGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#DFFF5E" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#DFFF5E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ================= LOGO ICON MARK (80x80) ================= -->
+  <g transform="translate(10, 10)">
+    <!-- Squircle Badge -->
+    <rect width="80" height="80" rx="22" fill="url(#logoBgDark)"/>
+    <rect x="2" y="2" width="76" height="76" rx="20" fill="none" stroke="url(#logoBorder)" stroke-width="2.5"/>
+
+    <!-- Ambient Core Glow -->
+    <circle cx="40" cy="40" r="26" fill="url(#logoGlow)"/>
+
+    <!-- Geometric Z Monogram scaled to 80x80 -->
+    <!-- Upper Wing -->
+    <path d="M 20 22 H 59 C 60.5 22 61.5 23.6 60.5 25 L 53 34.5 H 36 L 27.5 28 L 20 22 Z" fill="url(#logoLime)"/>
+
+    <!-- Diagonal Slash -->
+    <path d="M 54 30 L 26.5 53 H 34 L 60 30 H 54 Z" fill="#FBFFBD"/>
+
+    <!-- Lower Wing -->
+    <path d="M 60 58 H 21 C 19.5 58 18.5 56.4 19.5 55 L 27 45.5 H 44 L 52.5 52 L 60 58 Z" fill="url(#logoLime)"/>
+
+    <!-- Beacon Dot -->
+    <circle cx="62" cy="19.5" r="3.5" fill="#DFFF5E"/>
+  </g>
+
+  <!-- ================= TYPOGRAPHY ================= -->
+  <!-- Name: Zeshan -->
+  <text x="108" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Poppins', sans-serif" font-weight="900" font-size="44" fill="#13382F" letter-spacing="-1.5">
+    Zeshan
+  </text>
+
+  <!-- .dev Pill Badge -->
+  <g transform="translate(286, 32)">
+    <rect width="78" height="34" rx="9" fill="#13382F" stroke="#DFFF5E" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="39" y="23" font-family="'JetBrains Mono', 'Fira Code', Menlo, monospace" font-weight="700" font-size="16" fill="#DFFF5E" text-anchor="middle" letter-spacing="1">
+      .dev
+    </text>
+    <circle cx="67" cy="17" r="3" fill="#DFFF5E"/>
+  </g>
+</svg>

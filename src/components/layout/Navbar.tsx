@@ -7,6 +7,7 @@ import { NAV_ITEMS, PERSONAL_INFO } from "@/data/portfolioData";
 import { cn } from "@/lib/utils";
 import { triggerConfetti } from "@/lib/confetti";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
+import { Logo } from "@/components/ui/Logo";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -87,20 +88,11 @@ export function Navbar() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center justify-between">
-            {/* Logo with Green Dot (Babun Style) */}
-            <a
-              href="#hero"
+            {/* Custom Cyber Z Brand Logo */}
+            <Logo
+              isScrolled={isScrolled}
               onClick={(e) => handleNavClick(e, "#hero")}
-              className="flex items-center gap-2 group cursor-pointer"
-            >
-              <div className="w-3.5 h-3.5 rounded-full bg-[#13382f] flex items-center justify-center group-hover:scale-110 transition-transform">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#DFFF5E] animate-pulse" />
-              </div>
-              <span className="font-extrabold text-lg sm:text-2xl text-[#13382f] tracking-tight font-sans">
-                {PERSONAL_INFO.name.split(" ")[0]}
-                <span className="text-slate-600 font-semibold text-base sm:text-lg">.dev</span>
-              </span>
-            </a>
+            />
 
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center gap-7 lg:gap-9">
@@ -193,13 +185,15 @@ export function Navbar() {
             >
               {/* Header inside drawer */}
               <div className="flex items-center justify-between pb-3 border-b border-emerald-800/80">
-                <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#DFFF5E] animate-pulse" />
-                  <span className="text-xs text-[#DFFF5E] font-bold tracking-widest uppercase">
-                    Available for Hire
-                  </span>
+                <Logo
+                  size="sm"
+                  theme="dark"
+                  onClick={(e) => handleNavClick(e, "#hero")}
+                />
+                <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/5 border border-emerald-700/50 text-[11px] text-[#DFFF5E] font-mono">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#DFFF5E] animate-pulse" />
+                  <span>Available</span>
                 </div>
-                <span className="text-xs text-slate-300 font-medium">Lahore, PK</span>
               </div>
 
               {/* Nav Items */}

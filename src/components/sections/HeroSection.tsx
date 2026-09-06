@@ -1,26 +1,35 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowDown,
   ArrowUpRight,
-  CheckCircle2,
   Sparkles,
-  Layers,
   Terminal,
-  ArrowRight,
-  ExternalLink,
   Code2,
-  Database,
-  Cpu,
 } from "lucide-react";
 import { PERSONAL_INFO, STATS } from "@/data/portfolioData";
 import { Container } from "@/components/layout/Container";
 import { triggerConfetti } from "@/lib/confetti";
 
+const ROLES = [
+  "MERN Stack Developer",
+  "Frontend-Focused Engineer",
+  "React.js & Next.js Specialist",
+  "High-Performance UI Architect",
+];
+
 export function HeroSection() {
   const [activeMockupTab, setActiveMockupTab] = useState<number>(0);
+  const [roleIndex, setRoleIndex] = useState<number>(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setRoleIndex((prev) => (prev + 1) % ROLES.length);
+    }, 2800);
+    return () => clearInterval(timer);
+  }, []);
 
   const handleScrollToProjects = () => {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
@@ -56,45 +65,151 @@ export function HeroSection() {
         +
       </div>
 
+      {/* Floating Ambient Tech Badges (Desktop) */}
+      <motion.div
+        animate={{ y: [0, -10, 0], rotate: [-1, 1.5, -1] }}
+        transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+        className="hidden lg:flex absolute left-8 top-32 items-center gap-2 px-3.5 py-1.5 rounded-2xl bg-white/90 backdrop-blur-md shadow-lg border border-[#13382f]/10 text-xs font-bold text-[#13382f] pointer-events-none z-10"
+      >
+        <Code2 className="w-4 h-4 text-[#13382f]" />
+        <span>Next.js 16 · SSR &amp; Turbopack</span>
+      </motion.div>
+
+      <motion.div
+        animate={{ y: [0, 10, 0], rotate: [1, -1.5, 1] }}
+        transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut", delay: 0.6 }}
+        className="hidden lg:flex absolute right-8 top-36 items-center gap-2 px-3.5 py-1.5 rounded-2xl bg-white/90 backdrop-blur-md shadow-lg border border-[#13382f]/10 text-xs font-bold text-[#13382f] pointer-events-none z-10"
+      >
+        <Sparkles className="w-4 h-4 text-[#13382f]" />
+        <span>Silky Micro-Interactions</span>
+      </motion.div>
+
       <Container size="default">
         {/* Top Text & Headline */}
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto pt-4 sm:pt-8 pb-10 sm:pb-12 px-2 sm:px-0">
-          {/* Floating Pill Badge */}
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto pt-4 sm:pt-6 pb-8 sm:pb-10 px-2 sm:px-0 relative z-10">
+          {/* Floating Pill Badge with Micro-Motion */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 10 }}
+            initial={{ opacity: 0, scale: 0.85, y: -10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#13382f]/10 border border-[#13382f]/20 text-xs font-bold text-[#13382f] uppercase tracking-wider mb-5"
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            whileHover={{ scale: 1.05 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#13382f]/10 border border-[#13382f]/20 text-xs font-bold text-[#13382f] uppercase tracking-wider mb-5 shadow-xs cursor-default"
           >
-            <span className="w-2 h-2 rounded-full bg-[#13382f] animate-ping" />
-            <span>MERN &amp; Frontend Engineer</span>
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#13382f] opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#13382f]" />
+            </span>
+            <span>Frontend &amp; MERN Stack Specialist</span>
+          </motion.div>
+
+          {/* Animated Greeting & Name */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex items-center justify-center gap-2 sm:gap-2.5 text-base sm:text-xl md:text-2xl font-bold text-[#13382f]/85 mb-2 font-sans"
+          >
+            <motion.span
+              animate={{ rotate: [0, 14, -8, 14, 0] }}
+              transition={{ repeat: Infinity, repeatDelay: 2.5, duration: 1.4 }}
+              className="inline-block origin-bottom-right select-none text-xl sm:text-2xl"
+            >
+              👋
+            </motion.span>
+            <span>Hi, I&apos;m</span>
+            <span className="font-black text-[#13382f] relative group cursor-default">
+              {PERSONAL_INFO.name}
+              <motion.span
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ delay: 0.7, duration: 0.7, ease: "easeOut" }}
+                className="absolute -bottom-1 left-0 right-0 h-[2.5px] bg-[#13382f] rounded-full origin-left"
+              />
+            </span>
           </motion.div>
 
           {/* Main Title */}
           <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, ease: "easeOut" }}
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#13382f] leading-[1.12] mb-5 sm:mb-6 font-sans"
-          >
-            {PERSONAL_INFO.name} | Frontend &amp; MERN Stack Developer
-          </motion.h1>
-
-          {/* Subtitle */}
-          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.15 }}
-            className="text-sm sm:text-base md:text-xl text-[#13382f]/85 font-medium max-w-2xl leading-relaxed mb-8 px-2 sm:px-4"
+            transition={{ duration: 0.65, delay: 0.15, ease: "easeOut" }}
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#13382f] leading-[1.12] mb-5 font-sans"
           >
-            Building responsive, high-performance web applications using React.js, Next.js, Redux, Node.js &amp; MongoDB with component-driven clean architecture.
-          </motion.p>
+            Crafting Dynamic &amp; High-Performance Web Apps
+          </motion.h1>
 
-          {/* Action Buttons (Full width on mobile, inline on desktop) */}
+          {/* Animated Dynamic Role Switcher Pill */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.25, duration: 0.5 }}
+            className="mb-6 flex items-center justify-center"
+          >
+            <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-2.5 rounded-2xl bg-[#13382f] text-[#DFFF5E] shadow-xl border border-emerald-950/40 select-none">
+              <Terminal className="w-4 h-4 sm:w-5 sm:h-5 text-[#DFFF5E] animate-pulse shrink-0" />
+              <div className="h-6 sm:h-7 md:h-8 overflow-hidden flex items-center min-w-[200px] sm:min-w-[270px] md:min-w-[320px] justify-center">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={ROLES[roleIndex]}
+                    initial={{ opacity: 0, y: 22, filter: "blur(4px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    exit={{ opacity: 0, y: -22, filter: "blur(4px)" }}
+                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    className="font-mono font-bold text-xs sm:text-sm md:text-base tracking-wide text-center"
+                  >
+                    &gt; {ROLES[roleIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </div>
+              <span className="w-1.5 h-4 sm:h-5 bg-[#DFFF5E] animate-pulse shrink-0 rounded-xs" />
+            </div>
+          </motion.div>
+
+          {/* Subtitle with Tech Pills */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 0.3 }}
+            className="max-w-2xl mx-auto mb-7 px-2 sm:px-4"
+          >
+            <p className="text-sm sm:text-base md:text-lg text-[#13382f]/85 font-medium leading-relaxed mb-3.5">
+              Engineering lightning-fast, reactive web applications using Next.js, React, Redux, Node.js &amp; MongoDB with component-driven clean architecture.
+            </p>
+
+            {/* Interactive Tech Badge Pills */}
+            <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+              {[
+                { name: "React 19", highlight: true },
+                { name: "Next.js 16", highlight: true },
+                { name: "Redux Toolkit", highlight: false },
+                { name: "Node.js", highlight: false },
+                { name: "Express", highlight: false },
+                { name: "MongoDB", highlight: false },
+                { name: "Tailwind CSS", highlight: false },
+              ].map((tech, i) => (
+                <motion.span
+                  key={tech.name}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.35 + i * 0.05 }}
+                  whileHover={{ scale: 1.08, y: -2 }}
+                  className={`px-2.5 py-1 rounded-lg text-[11px] sm:text-xs font-bold font-mono transition-all cursor-default ${
+                    tech.highlight
+                      ? "bg-[#13382f] text-[#DFFF5E] shadow-xs"
+                      : "bg-[#13382f]/10 text-[#13382f] hover:bg-[#13382f] hover:text-[#DFFF5E]"
+                  }`}
+                >
+                  #{tech.name}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Action Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.25 }}
+            transition={{ duration: 0.65, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto max-w-xs sm:max-w-none mb-3"
           >
             <motion.button
@@ -104,17 +219,22 @@ export function HeroSection() {
               className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#13382f] text-[#DFFF5E] font-bold text-sm uppercase tracking-wider hover:bg-black transition-all shadow-xl hover:shadow-2xl cursor-pointer flex items-center justify-center gap-2 group"
             >
               <span>Explore Projects</span>
-              <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+              <motion.span
+                animate={{ y: [0, 4, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              >
+                <ArrowDown className="w-4 h-4" />
+              </motion.span>
             </motion.button>
 
             <motion.button
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.96 }}
               onClick={handleScrollToContact}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-transparent border-2 border-[#13382f] text-[#13382f] font-bold text-sm uppercase tracking-wider hover:bg-[#13382f] hover:text-[#DFFF5E] transition-all cursor-pointer flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-transparent border-2 border-[#13382f] text-[#13382f] font-bold text-sm uppercase tracking-wider hover:bg-[#13382f] hover:text-[#DFFF5E] transition-all cursor-pointer flex items-center justify-center gap-2 group"
             >
               <span>Contact Me</span>
-              <ArrowUpRight className="w-4 h-4" />
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </motion.button>
           </motion.div>
 
@@ -122,10 +242,10 @@ export function HeroSection() {
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.5 }}
             className="text-[11px] sm:text-xs font-bold text-[#13382f]/70 uppercase tracking-widest mt-3 flex items-center gap-1.5"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-700" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-700 animate-ping" />
             <span>Lahore, Pakistan · Open to Full-Time &amp; Remote Roles</span>
           </motion.span>
         </div>

@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, type HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-interface TiltCardProps extends React.HTMLAttributes<HTMLDivElement> {
+interface TiltCardProps extends HTMLMotionProps<"div"> {
   children: React.ReactNode;
   maxTilt?: number;
   className?: string;
@@ -70,7 +70,7 @@ export function TiltCard({
         "relative rounded-3xl transition-shadow duration-300",
         className
       )}
-      {...(props as any)}
+      {...props}
     >
       {/* Dynamic Cursor Light Spot on Hover */}
       {isHovered && (

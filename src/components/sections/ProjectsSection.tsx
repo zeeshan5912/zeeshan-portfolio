@@ -26,11 +26,15 @@ export function ProjectsSection() {
       <Container size="default">
         {/* Section Header (Babun Demo Header) */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 sm:mb-16 px-2">
-          <span className="text-xs font-medium text-slate-500 uppercase tracking-widest mb-2 sm:mb-3">
+          <span className="text-xs font-medium text-slate-500 uppercase tracking-widest mb-2 sm:mb-3 block">
             Portfolio Showcase
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#13382f] tracking-tight leading-tight mb-4">
-            06+ Production-Ready &amp; High-Performance Projects
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#13382f] tracking-tight leading-tight mb-4">
+            06+ Production-Ready &amp;{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10">High-Performance Projects</span>
+              <span className="absolute bottom-1.5 left-0 right-0 h-3 bg-[#DFFF5E] -z-0 opacity-80 rounded-sm" />
+            </span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base max-w-xl">
             Real-world MERN stack applications, responsive Next.js landing pages, and intuitive administrative control panels.

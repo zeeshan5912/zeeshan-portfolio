@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-poppins), system-ui, sans-serif;
+  --font-sans: var(--font-josefin), system-ui, sans-serif;
+  --font-josefin: var(--font-josefin), system-ui, sans-serif;
 }
 
 @layer base {
@@ -16,13 +17,13 @@
 
   html {
     scroll-behavior: smooth;
-    font-family: var(--font-poppins), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--font-josefin), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 
   body {
     background-color: #ffffff;
     color: #13382f;
-    font-family: var(--font-poppins), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--font-josefin), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     overflow-x: hidden;
   }
 

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { ArrowUp, Terminal, Mail, Phone, MapPin } from "lucide-react";
 import { LinkedInIcon } from "@/components/ui/Icons";
 import { PERSONAL_INFO, NAV_ITEMS } from "@/data/portfolioData";
+import { Logo } from "@/components/ui/Logo";
 import { Container } from "./Container";
 
 export function Footer() {
@@ -34,15 +35,8 @@ export function Footer() {
     <footer className="bg-[#13382f] text-white py-12 border-t border-emerald-900/60 relative">
       <Container size="default">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-emerald-800/60 text-center md:text-left">
-          {/* Logo with Green Dot */}
-          <div className="flex items-center gap-2">
-            <div className="w-3.5 h-3.5 rounded-full bg-[#DFFF5E] flex items-center justify-center">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#13382f]" />
-            </div>
-            <span className="font-bold text-xl text-white tracking-tight">
-              {PERSONAL_INFO.name}
-            </span>
-          </div>
+          {/* Custom Cyber Z Brand Logo */}
+          <Logo theme="dark" size="md" variant="full" />
 
           {/* Quick Nav Links */}
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-normal text-slate-300">

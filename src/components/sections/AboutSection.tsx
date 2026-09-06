@@ -28,10 +28,9 @@ export function AboutSection() {
       <Container size="default">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 sm:mb-16 px-2">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#13382f]/5 border border-[#13382f]/10 text-xs font-bold text-[#13382f] uppercase tracking-wider mb-3">
-            <span className="w-2 h-2 rounded-full bg-[#13382f]" />
-            <span>About Me &amp; Philosophy</span>
-          </div>
+          <span className="text-xs font-medium text-slate-500 uppercase tracking-widest mb-2 sm:mb-3 block">
+            About Me &amp; Philosophy
+          </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#13382f] tracking-tight leading-tight mb-4">
             Engineering High-Performance{" "}
             <span className="relative inline-block">

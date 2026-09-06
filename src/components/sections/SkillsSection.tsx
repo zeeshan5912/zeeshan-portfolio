@@ -64,10 +64,14 @@ export function SkillsSection() {
           <span className="text-xs font-medium text-[#DFFF5E] uppercase tracking-widest mb-2 sm:mb-3 block">
             Technical Arsenal
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
-            Core Features &amp; Capabilities
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            Core Features &amp;{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10 text-[#DFFF5E]">Capabilities</span>
+              <span className="absolute bottom-1.5 left-0 right-0 h-3 bg-[#DFFF5E]/20 -z-0 rounded-sm" />
+            </span>
           </h2>
-          <p className="text-slate-300 text-xs sm:text-sm mt-3 max-w-lg mx-auto font-normal">
+          <p className="text-slate-300 text-xs sm:text-sm max-w-lg mx-auto font-normal">
             Full-stack engineering stack built on component-driven principles, fast render cycles, and clean patterns.
           </p>
         </div>

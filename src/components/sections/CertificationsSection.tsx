@@ -14,7 +14,6 @@ import {
   Sparkles,
   Copy,
   Check,
-  ShieldCheck,
   FileCheck2,
 } from "lucide-react";
 import { Container } from "@/components/layout/Container";
@@ -29,12 +28,16 @@ export function CertificationsSection() {
   const { copied, copy } = useClipboard(2000);
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
+  const closeModal = () => {
+    setSelectedCert(null);
+    setZoomLevel(false);
+  };
+
   // Close modal on Escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        setSelectedCert(null);
-        setZoomLevel(false);
+        closeModal();
       }
     };
     if (selectedCert) {
@@ -42,7 +45,6 @@ export function CertificationsSection() {
       window.addEventListener("keydown", handleKeyDown);
     } else {
       document.body.style.overflow = "unset";
-      setZoomLevel(false);
     }
     return () => {
       document.body.style.overflow = "unset";
@@ -90,8 +92,13 @@ export function CertificationsSection() {
               <Code2 className="w-8 h-8 text-[#13382f]" />
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#13382f] tracking-tight leading-tight mb-3">
-              Clean Architecture &amp; Reusable Components in Every Project.
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#13382f] tracking-tight leading-tight mb-3">
+              Clean Architecture &amp;{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10">Reusable Components</span>
+                <span className="absolute bottom-1.5 left-0 right-0 h-3 bg-white/70 -z-0 rounded-sm" />
+              </span>{" "}
+              in Every Project.
             </h2>
             <p className="text-sm sm:text-base font-normal text-[#13382f]/80 max-w-xl">
               Strict component separation, custom hook abstractions, and maintainable state logic.
@@ -110,13 +117,16 @@ export function CertificationsSection() {
         <Container size="default">
           {/* Section Header */}
           <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14 relative z-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-emerald-800/15 shadow-sm text-xs font-medium text-[#13382f] uppercase tracking-wider mb-4">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>Verified Qualifications</span>
-            </div>
+            <span className="text-xs font-medium text-slate-500 uppercase tracking-widest mb-2 sm:mb-3 block">
+              Verified Qualifications
+            </span>
 
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#13382f] tracking-tight mb-4">
-              Verified Technical Certifications
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#13382f] tracking-tight leading-tight mb-4">
+              Verified Technical{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10">Certifications</span>
+                <span className="absolute bottom-1.5 left-0 right-0 h-3 bg-[#DFFF5E] -z-0 opacity-80 rounded-sm" />
+              </span>
             </h3>
 
             <p className="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed font-normal">
@@ -324,7 +334,7 @@ export function CertificationsSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              onClick={() => setSelectedCert(null)}
+              onClick={closeModal}
               className="absolute inset-0 bg-black/85 backdrop-blur-md cursor-pointer"
             />
 
@@ -361,7 +371,7 @@ export function CertificationsSection() {
                   )}
 
                   <button
-                    onClick={() => setSelectedCert(null)}
+                    onClick={closeModal}
                     className="p-2 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-700 transition-colors cursor-pointer"
                     aria-label="Close modal"
                   >
